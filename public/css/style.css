@@ -96,3 +96,22 @@ footer p{
   margin-right: 10px;
   width: 50px;
 }
+
+.login-form{
+
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.butt{
+  margin-top: 10px;
+  width: 100px;
+}
+
+.error1{
+  position: fixed;
+  left: 580px;
+  top: 320px;
+  color: red;
+}
