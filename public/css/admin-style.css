@@ -1,0 +1,34 @@
+.test-table{
+  margin-top: 20px;
+}
+
+nav.navbar.navbar-default{
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.drag-drop{
+  width: 100%;
+  height: 500px;
+  background-color: grey;
+  margin-top: 10px;
+}
+
+.drag-drop h4{
+  margin: auto;
+  width: 200px;
+  height: 100px;
+  padding-top: 250px;
+
+}
+
+.submit{
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+.added{
+  color: red;
+}
