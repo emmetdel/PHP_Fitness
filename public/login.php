@@ -24,7 +24,7 @@
     <ul class="nav navbar-nav">
       <li><a href="#">Home</a></li>
       <li><a href="#">Membership</a></li>
-      <li><a href="#">Classes</a></li>
+      <li><a href="#..">Classes</a></li>
       <li><a href="/PHP_Fitness/public/testimonials.php">Testimonials</a></li>
       <li><a href="#">Facilities</a></li>
       <li><a href="#">Contact Us</a></li>
