@@ -86,7 +86,6 @@
             echo '<a href="add-new/bookings-addnew.php">Add</a>';
 
           }
-
           mysqli_close($dbc);
         ?>
 </div>
