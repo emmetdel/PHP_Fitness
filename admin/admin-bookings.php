@@ -88,7 +88,6 @@
           }
 
           mysqli_close($dbc);
-
         ?>
 </div>
     <script type="text/javascript" src="javascript/bootstrap.js"></script>
