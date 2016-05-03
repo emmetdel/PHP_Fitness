@@ -49,7 +49,7 @@
     	exit;
     }else {
       echo "<div class=\"error1\">";
-      echo "<h4>Please try again</h4>";
+      echo "<h3>Please try again</h3>";
       echo "</div>";
 
     }
