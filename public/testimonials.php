@@ -28,7 +28,7 @@
       <li class="active"><a href="#">Testimonials</a></li>
       <li><a href="#">Facilities</a></li>
       <li><a href="#">Contact Us</a></li>
-      <li><a href="/group_website/admin/admin-feature-box.php">Login</a></li>
+      <li><a href="/PHP_Fitness/public/login.php">Login</a></li>
     </ul>
   </div>
 </nav>
