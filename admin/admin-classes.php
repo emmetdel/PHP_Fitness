@@ -74,12 +74,12 @@
             <td align="left">' . $row['class_date'] . '</td>
             <td align="left">' . $row['class_instructor'] . '</td>
             <td align="left">' . $row['class_price'] . '</td>
-            <td align="left"><a href="edit_pages/pages-edit.php?id=' . $row['class_id'] . '">Edit</a></td>
-            <td align="left"><a href="delete/pages-edit.php?id=' . $row['class_id'] . '">Delete</a></td>
+            <td align="left"><a href="edit_pages/classes-edit.php?id=' . $row['class_id'] . '">Edit</a></td>
+            <td align="left"><a href="delete/delete-classes.php?id=' . $row['class_id'] . '">Delete</a></td>
           </tr>
           ';
         }
-
+        echo '<td align="left"><a href="add-new/classes-addnew.php">Add New</a></td>';
         echo '</table>';
         mysqli_free_result ($r);
 

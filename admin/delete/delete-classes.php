@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Delete Page</title>
+    <title>Delete Classes</title>
     <link rel="stylesheet" href="/PHP_fitness/public/css/bootstrap.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="/PHP_fitness/public/css/style.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="/PHP_fitness/public/css/admin-style.css" media="screen"  charset="utf-8">
@@ -18,12 +18,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Delete Page</a>
+    <a class="navbar-brand" href="#">Delete Class</a>
   </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/PHP_fitness/admin/admin-bookings.php">Return Home</a></li>
+      <li class="active"><a href="/PHP_fitness/admin/admin-classes.php">Return Home</a></li>
     </ul>
   </div>
 </nav>
@@ -33,8 +33,8 @@
   // This page is for deleting a user record.
   // This page is accessed through view_users.php.
 
-  $page_title = 'Delete a User';
-  echo '<h1>Delete a Booking</h1>';
+  $page_title = 'Delete a Class';
+  echo '<h1>Delete a Class</h1>';
 
   // Check for a valid user ID, through GET or POST:
   if ( (isset($_GET['id'])) && (is_numeric($_GET['id'])) ) { // From view_users.php
@@ -42,7 +42,7 @@
   } elseif ( (isset($_POST['id'])) && (is_numeric($_POST['id'])) ) { // Form submission.
   	$id = $_POST['id'];
   } else { // No valid ID, kill the script.
-  	echo '<p class="error">This page has been accessed in error. Please select a user to delete from the <a href="view_users.php">view users</a> page.</p>';
+  	echo '<p class="error">This page has been accessed in error. Please select a class to delete from the <a href="view_users.php">view users</a> page.</p>';
   	exit();
   }
 
@@ -54,26 +54,26 @@
   	if ($_POST['sure'] == 'Yes') { // Delete the record.
 
   		// Make the query:
-  		$q = "DELETE FROM bookings WHERE booking_id=$id LIMIT 1";
+  		$q = "DELETE FROM classes WHERE class_id=$id LIMIT 1";
   		$r = @mysqli_query ($dbc, $q);
   		if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
 
   			// Print a message:
-  			echo '<p>The user has been deleted.</p>';
+  			echo '<p>The class has been deleted.</p>';
 
   		} else { // If the query did not run OK.
-  			echo '<p class="error">The user could not be deleted due to a system error.</p>'; // Public message.
+  			echo '<p class="error">The class could not be deleted due to a system error.</p>'; // Public message.
   			echo '<p>' . mysqli_error($dbc) . '<br />Query: ' . $q . '</p>'; // Debugging message.
   		}
 
   	} else { // No confirmation of deletion.
-  		echo '<p>The user has NOT been deleted.</p>';
+  		echo '<p>The class has NOT been deleted.</p>';
   	}
 
   } else { // Show the form.
 
   	// Retrieve the user's information:
-  	$q = "SELECT name FROM bookings WHERE booking_id=$id";
+  	$q = "SELECT class_name FROM classes WHERE class_id=$id";
   	$r = @mysqli_query ($dbc, $q);
 
   	if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
@@ -82,10 +82,10 @@
   		$row = mysqli_fetch_array ($r);
 
   		// Display the record being deleted:
-  		echo "<h3>Booking Name: $row[name]</h3> Are you sure you want to delete this booking?";
+  		echo "<h3>Class Name: $row[class_name]</h3> Are you sure you want to delete this class?";
 
   		// Create the form:
-  		echo '<form action="delete-bookings.php" method="post">
+  		echo '<form action="delete-classes.php" method="post">
   	<input type="radio" name="sure" value="Yes" /> Yes
   	<input type="radio" name="sure" value="No" checked="checked" /> No
   	<input type="submit" name="submit" value="Submit" />

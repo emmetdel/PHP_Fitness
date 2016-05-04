@@ -3,10 +3,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Add New Class</title>
-    <link rel="stylesheet" href="/group_website/public/css/bootstrap.css" media="screen"  charset="utf-8">
-    <link rel="stylesheet" href="/group_website/public/css/style.css" media="screen"  charset="utf-8">
-    <link rel="stylesheet" href="/group_website/public/css/admin-style.css" media="screen"  charset="utf-8">
+    <title>Add New Booking</title>
+    <link rel="stylesheet" href="/PHP_fitness/public/css/bootstrap.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/PHP_fitness/public/css/style.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/PHP_fitness/public/css/admin-style.css" media="screen"  charset="utf-8">
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
 
-      <li class="active"><a href="/group_website/admin/admin-bookings.php">Return Home</a></li>
+      <li class="active"><a href="/PHP_fitness/admin/admin-bookings.php">Return Home</a></li>
     </ul>
   </div>
 </nav>

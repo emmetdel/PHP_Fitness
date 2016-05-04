@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>Add New Feature Box</title>
-    <link rel="stylesheet" href="/group_website/public/css/bootstrap.css" media="screen"  charset="utf-8">
-    <link rel="stylesheet" href="/group_website/public/css/style.css" media="screen"  charset="utf-8">
-    <link rel="stylesheet" href="/group_website/public/css/admin-style.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/PHP_Fitness/public/css/bootstrap.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/PHP_Fitness/public/css/style.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/PHP_Fitness/public/css/admin-style.css" media="screen"  charset="utf-8">
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
 
-      <li class="active"><a href="/group_website/admin/admin-feature-box.php">Return Home</a></li>
+      <li class="active"><a href="/PHP_Fitness/admin/admin-feature-box.php">Return Home</a></li>
     </ul>
   </div>
 </nav>
