@@ -70,12 +70,11 @@
                   <td align="left">' . $row['offer_image'] . '</td>
                   <td align="left">' . $row['offer_desc'] . '</td>
                   <td align="left"><a href="edit_pages/featurebox-edit.php?id=' . $row['offer_id'] . '">Edit</a></td>
-                  <td align="left"><a href="delete/delete-confirmation.php?id=' . $row['offer_id'] . '">Delete</a></td>
-                  <td align="left"><a href="add-new/featurebox-addnew.php">Add</a></td>
+                  <td align="left"><a href="delete/delete-featurebox.php?id=' . $row['offer_id'] . '">Delete</a></td>
                 </tr>
                 ';
               }
-
+              echo '<td align="left"><a href="add-new/featurebox-addnew.php">Add</a></td>';
               echo '</table>';
               mysqli_free_result ($r);
 
