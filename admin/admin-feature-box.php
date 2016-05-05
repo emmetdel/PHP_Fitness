@@ -41,7 +41,6 @@
             echo '<h1>Feature Boxes</h1>';
 
             require ('mysqli_connect.php');
-..
             // Define the query:
             $q = "SELECT offer_id, offer_title, offer_desc, offer_image FROM feature_box";
             $r = @mysqli_query ($dbc, $q);

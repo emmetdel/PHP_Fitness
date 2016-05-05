@@ -52,7 +52,7 @@
                   if ($num > 0) { // If it ran OK, display the records.
 
                     // Print how many users there are:
-                    echo "<p>There are currently $num feature boxes.</p>\n";
+                    echo "<p>There are currently $num pages.</p>\n";
 
                     // Table header:
                     echo '<table class="table table-striped test-table" align="center" cellspacing="3" cellpadding="3" width="75%">
@@ -69,13 +69,12 @@
                         <td align="left">' . $row['page_name'] . '</td>
                         <td align="left">' . $row['page_details'] . '</td>
                         <td align="left">' . $row['page_images'] . '</td>
-                        <td align="left"><a href="edit_pagespages-edit.php?id=' . $row['page_id'] . '">Edit</a></td>
-                        <td align="left"><a href="delete/delete-confirmation.php?id=' . $row['page_id'] . '">Delete</a></td>
-                        <td align="left"><a href="add-new/pages-addnew.php">Add</a></td>
+                        <td align="left"><a href="edit_pages/pages-edit.php?id=' . $row['page_id'] . '">Edit</a></td>
+                        <td align="left"><a href="delete/delete-page.php?id=' . $row['page_id'] . '">Delete</a></td>
                       </tr>
                       ';
                     }
-
+                    echo '<td align="left"><a href="add-new/pages-addnew.php">Add</a></td>';
                     echo '</table>';
                     mysqli_free_result ($r);
 

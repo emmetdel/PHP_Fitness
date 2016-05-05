@@ -37,8 +37,8 @@
 <div class="container page">
           <?php
 
-            $page_title = 'View the Current Classes';
-            echo '<h1>Classes</h1>';
+            $page_title = 'View the Current Testimonials';
+            echo '<h1>Testimonials</h1>';
 
             require ('mysqli_connect.php');
 
@@ -71,12 +71,11 @@
                   <td align="left">' . $row['test_date'] . '</td>
                   <td align="left">' . $row['test_comment'] . '</td>
                   <td align="left"><a href="edit_pages/testimonials-edit.php?id=' . $row['test_id'] . '">Edit</a></td>
-                  <td align="left"><a href="delete/pages-edit.php?id=' . $row['test_id'] . '">Delete</a></td>
-                  <td align="left"><a href="add-new/testimonials-addnew.php">Add New</a></td>
+                  <td align="left"><a href="delete/delete-testimonial.php?id=' . $row['test_id'] . '">Delete</a></td>
                 </tr>
                 ';
               }
-
+              echo '<td align="left"><a href="add-new/testimonials-addnew.php">Add New</a></td>';
               echo '</table>';
               mysqli_free_result ($r);
 
