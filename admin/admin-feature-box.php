@@ -24,7 +24,6 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Feature Boxes</a></li>
-      ..
       <li><a href="admin-membership.php">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
       <li><a href="admin-testimonials.php">Testimonials</a></li>
@@ -42,7 +41,7 @@
             echo '<h1>Feature Boxes</h1>';
 
             require ('mysqli_connect.php');
-
+..
             // Define the query:
             $q = "SELECT offer_id, offer_title, offer_desc, offer_image FROM feature_box";
             $r = @mysqli_query ($dbc, $q);
