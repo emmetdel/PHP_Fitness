@@ -51,7 +51,7 @@
             if ($num > 0) { // If it ran OK, display the records.
 
               // Print how many users there are:
-              echo "<p>There are currently $num feature boxes.</p>\n";
+              echo "<p>There are currently $num memberships.</p>\n";
 
               // Table header:
               echo '<table class="table table-striped test-table" align="center" cellspacing="3" cellpadding="3" width="75%">
@@ -71,12 +71,11 @@
                   <td align="left">' . $row['membership_duration'] . '</td>
                   <td align="left">' . $row['membership_comment'] . '</td>
                   <td align="left"><a href="edit_pages/membership-edit.php?id=' . $row['mem_id'] . '">Edit</a></td>
-                  <td align="left"><a href="delete/delete-confirmation.php?id=' . $row['mem_id'] . '">Delete</a></td>
-                  <td align="left"><a href="add-new/membership-addnew.php">Add</a></td>
+                  <td align="left"><a href="delete/delete-membership.php?id=' . $row['mem_id'] . '">Delete</a></td>
                 </tr>
                 ';
               }
-
+              echo '<td align="left"><a href="add-new/membership-addnew.php">Add</a></td>';
               echo '</table>';
               mysqli_free_result ($r);
 
