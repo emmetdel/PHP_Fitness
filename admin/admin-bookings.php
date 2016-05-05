@@ -30,7 +30,7 @@
       <li><a href="admin-image-upload.php">Images Page</a></li>
       <li class="active"><a href="#">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
-      <li><a href="../public/testimonials.php">Logout</a></li>
+      <li><a href="../public/index.php">Logout</a></li>
     </ul>
   </div>
 </nav>

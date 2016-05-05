@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Testimonials Page</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen"  charset="utf-8">
   </head>
@@ -22,12 +22,12 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="index.php">Home</a></li>
-  		<li><a href="membership.php">Membership</a></li>
-  		<li><a href="classes.php">Classes</a></li>
-  		<li  class="active"><a href="testimonials.php">Testimonials</a></li>
-  		<li><a href="facilities.php">Facilities</a></li>
-  		<li><a href="contact.php">Contact Us</a></li>
+      <li class="active"><a href="index.php">Home</a></li>
+      <li><a href="membership.php">Membership</a></li>
+      <li><a href="classes.php">Classes</a></li>
+     <li><a href="testiomonials.php">Testimonials</a></li>
+      <li><a href="facilities.php">Facilities</a></li>
+      <li><a href="contact.php">Contact Us</a></li>
       <li><a href="login.php">Login</a></li>
     </ul>
   </div>
@@ -35,34 +35,34 @@
 <div class="container page">
   <div class="col-md-12 hero-image">
     <div class=" col-md-4 hero-image-text">
-      <h1>Testimonials</h1>
-      <h4>What people are saying about us</h4>
+      <h1>Club Fitness</h1>
+      <h4>Celebrating health</h4>
     </div>
   </div>
   <div class="container" id="test">
     <div class="test col-md-6">
-      <h3>Quote 1</h3>
+      <h3>Special Offers</h3>
       <img src="http://placehold.it/140x180">
 
         <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
 
     </div>
     <div class="test col-md-6">
-      <h3>Quote 2</h3>
+      <h3>Classes</h3>
       <img src="http://placehold.it/140x180">
       <p>
         <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
       </p>
     </div>
     <div class="test col-md-6">
-      <h3>Quote 3</h3>
+      <h3>Facilities</h3>
       <img src="http://placehold.it/140x180">
 
         <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
 
     </div>
     <div class="test col-md-6">
-      <h3>Quote 4</h3>
+      <h3>Our Team</h3>
       <img src="http://placehold.it/140x180">
       <p>
         <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>

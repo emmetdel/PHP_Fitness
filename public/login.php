@@ -22,13 +22,13 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Membership</a></li>
-      <li><a href="#..">Classes</a></li>
-      <li><a href="/PHP_Fitness/public/testimonials.php">Testimonials</a></li>
-      <li><a href="#">Facilities</a></li>
-      <li><a href="#">Contact Us</a></li>
-      <li  class="active"><a href="/group_website/admin/admin-feature-box.php">Login</a></li>
+      <li><a href="index.php">Home</a></li>
+  		<li><a href="membership.php">Membership</a></li>
+  		<li><a href="classes.php">Classes</a></li>
+  		<li><a href="testimonials.php">Testimonials</a></li>
+  		<li><a href="facilities.php">Facilities</a></li>
+  		<li><a href="contact.php">Contact Us</a></li>
+      <li class="active"><a href="login.php">Login</a></li>
     </ul>
   </div>
 </nav>
@@ -39,7 +39,7 @@
     $username = "admin";
     $password = "admin";
     $hoursCookieExists = 36;
-    $dashboardURL = "http://localhost/PHP_Fitness/admin/admin-bookings.php";
+    $dashboardURL = "http://localhost/PHP_Fitness/admin/admin-feature-box.php";
 
     if( isset($_POST['pw']) and $_POST['pw'] == $password and isset($_POST['un']) and $_POST['un'] == $username )
     {
@@ -48,9 +48,9 @@
     	header("Location: $dashboardURL");
     	exit;
     }else {
-      echo "<div class=\"error1\">";
-      echo "<h3>Please try again</h3>";
-      echo "</div>";
+      // echo "<div class=\"error1\">";
+      // // echo "<h3>Please try again</h3>";
+      // echo "</div>";
 
     }
   ?>
