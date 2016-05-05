@@ -2,10 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Testimonials Page</title>
+    <title>Image Upload Page</title>
     <link rel="stylesheet" href="../public/css/bootstrap.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="../public/css/style.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="../public/css/admin-style.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../public/css/dropzone.css" />
+    <script type="text/javascript" src="/PHP_Fitness/public/js/dropzone.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -27,7 +29,7 @@
       <li><a href="admin-membership.php">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
       <li><a href="admin-testimonials.php">Testimonials</a></li>
-      <li class="active"><a href="admin-image-upload.php">Images Page</a></li>
+      <li class="active"><a href="admin-image-upload.php">Image Upload</a></li>
       <li><a href="admin-bookings.php">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
       <li><a href="../public/index.php">Logout</a></li>
@@ -35,14 +37,11 @@
   </div>
 </nav>
 <div class="container page">
-
-  <div class="drag-drop">
-      <h4>Drop Images Here</h4>
-
+  <h1>Drag + Drop Images Here</h1>
+  <div class="image_upload_div">
+  	<form action="upload.php" class="dropzone">
+      </form>
   </div>
-  <input class="submit" type="button" name="name" value="Submit">
-
-</div>
-    <script type="text/javascript" src="javascript/bootstrap.js"></script>
+  </html>
   </body>
 </html>

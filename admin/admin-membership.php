@@ -27,7 +27,7 @@
       <li class="active"><a href="#">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
       <li><a href="admin-testimonials.php">Testimonials</a></li>
-      <li><a href="admin-image-upload.php">Images Page</a></li>
+      <li><a href="admin-image-upload.php">Image Upload</a></li>
       <li><a href="admin-bookings.php">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
       <li><a href="../public/index.php">Logout</a></li>
