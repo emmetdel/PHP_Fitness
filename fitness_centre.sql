@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2016 at 04:57 PM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 7.0.4
+-- Generation Time: May 06, 2016 at 12:04 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -62,7 +62,7 @@ CREATE TABLE `classes` (
 --
 
 INSERT INTO `classes` (`class_id`, `class_name`, `class_time`, `class_date`, `class_price`, `class_instructor`) VALUES
-(1, 'Zumba (Beginners)', '9.00pm', '23/04/15', '€5', 'Perte Closse');
+(1, 'Zumba (Beginners)', '9.00pm', '23/04/15', '€5', 'Perte Clossey');
 
 -- --------------------------------------------------------
 
@@ -108,6 +108,25 @@ CREATE TABLE `feature_box` (
 
 INSERT INTO `feature_box` (`offer_id`, `home_page_id`, `offer_title`, `offer_desc`, `offer_image`) VALUES
 (1, '', '30% off this weekend!', 'For this weekend alone you can get 30% off all memberships!', 'https://www.mixcloud.com/fishgodeep/ss');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
+  `file_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `uploaded` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `file_name`, `uploaded`) VALUES
+(1, 'lake_grass_reflection_108798_1920x1080.jpg', '2016-05-05 23:53:00');
 
 -- --------------------------------------------------------
 
@@ -172,6 +191,13 @@ CREATE TABLE `pages` (
   `page_images` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`page_id`, `page_name`, `page_details`, `page_images`) VALUES
+(1, 'Offers', 'This page gives a list of offers available', 'sdfgdfgdfghdsfghdhdh');
+
 -- --------------------------------------------------------
 
 --
@@ -212,6 +238,12 @@ ALTER TABLE `facilities`
 --
 ALTER TABLE `feature_box`
   ADD PRIMARY KEY (`offer_id`);
+
+--
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `image gallery`
@@ -257,6 +289,11 @@ ALTER TABLE `classes`
 ALTER TABLE `feature_box`
   MODIFY `offer_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `membership`
 --
 ALTER TABLE `membership`
@@ -265,7 +302,7 @@ ALTER TABLE `membership`
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `page_id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `page_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `testimonials`
 --
