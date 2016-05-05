@@ -74,7 +74,6 @@
                   <td align="left"><a href="delete/delete-membership.php?id=' . $row['mem_id'] . '">Delete</a></td>
                 </tr>
                 ';
-                ..
               }
               echo '<td align="left"><a href="add-new/membership-addnew.php">Add</a></td>';
               echo '</table>';
