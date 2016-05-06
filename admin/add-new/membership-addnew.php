@@ -60,6 +60,12 @@
         $mc = trim($_POST['membership_comment']);
       }
 
+      if (empty($_POST['mem_image'])) {
+        $errors[] = 'You forgot to enter membership image.';
+      } else {
+        $mi = trim($_POST['mem_image']);
+      }
+
       if (empty($errors)) {
 
       require ('mysqli_connect.php');
@@ -68,10 +74,11 @@
       $mp = mysqli_real_escape_string($dbc, trim($mp));
       $md = mysqli_real_escape_string($dbc, trim($md));
       $mc = mysqli_real_escape_string($dbc, trim($mc));
+      $mi = mysqli_real_escape_string($dbc, trim($mi));
 
 
-      $sql = "INSERT INTO membership (membership_type, membership_price, membership_duration, membership_comment)
-      VALUES ('$mt', '$mp', '$md', '$mc')";
+      $sql = "INSERT INTO membership (membership_type, membership_price, membership_duration, membership_comment, mem_image)
+      VALUES ('$mt', '$mp', '$md', '$mc', '$mi')";
 
       $r = @mysqli_query($dbc, $sql);
 
@@ -105,7 +112,8 @@
       <label >Membership Type:</label><input name="membership_type" class = "form-control" value="<?php if (isset($_POST['membership_type'])) echo $_POST['membership_type']; ?>">
       <label >Membership Price:</label><input name="membership_price" class ="form-control" value="<?php if (isset($_POST['membership_price'])) echo $_POST['membership_price']; ?>">
       <label >Membership Duration:</label><input name="membership_duration" class = "form-control" value="<?php if (isset($_POST['membership_duration'])) echo $_POST['membership_duration']; ?>">
-      <label >Membership Commetn:</label><input name="membership_comment" class = "form-control" value="<?php if (isset($_POST['membership_comment'])) echo $_POST['membership_comment']; ?>">
+      <label >Membership Comment:</label><input name="membership_comment" class = "form-control" value="<?php if (isset($_POST['membership_comment'])) echo $_POST['membership_comment']; ?>">
+      <label >Membership Image:</label><input name="mem_image" class = "form-control" value="<?php if (isset($_POST['mem_image'])) echo $_POST['mem_image']; ?>">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

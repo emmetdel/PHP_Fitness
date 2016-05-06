@@ -42,7 +42,7 @@
             require ('mysqli_connect.php');
 
             // Define the query:
-            $q = "SELECT mem_id, membership_duration, membership_type, membership_comment, membership_price FROM membership";
+            $q = "SELECT mem_id, membership_duration, membership_type, membership_comment, membership_price, mem_image FROM membership";
             $r = @mysqli_query ($dbc, $q);
 
             // Count the number of returned rows:
@@ -60,6 +60,7 @@
                 <td align="left"><b>Price</b></td>
                 <td align="left"><b>Duration</b></td>
                 <td align="left"><b>Comment</b></td>
+                <td align="left"><b>Image</b></td>
               </tr>
             ';
 
@@ -70,6 +71,7 @@
                   <td align="left">' . $row['membership_price'] . '</td>
                   <td align="left">' . $row['membership_duration'] . '</td>
                   <td align="left">' . $row['membership_comment'] . '</td>
+                  <td align="left">' . $row['mem_image'] . '</td>
                   <td align="left"><a href="edit_pages/membership-edit.php?id=' . $row['mem_id'] . '">Edit</a></td>
                   <td align="left"><a href="delete/delete-membership.php?id=' . $row['mem_id'] . '">Delete</a></td>
                 </tr>

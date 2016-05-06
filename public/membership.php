@@ -40,35 +40,13 @@
     </div>
   </div>
   <div class="container" id="test">
-    <div class="test col-md-6">
-      <h3>Single Membership</h3>
-      <img src="http://placehold.it/140x180">
 
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
+    <?php
+      include('../functions/functions.php');
+      getMemberships();
+    ?>
 
-    </div>
-    <div class="test col-md-6">
-      <h3>Couple Membership</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
-    <div class="test col-md-6">
-      <h3>Family Membership</h3>
-      <img src="http://placehold.it/140x180">
-
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
-
-    </div>
-    <div class="test col-md-6">
-      <h3>Team Membership</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
-    </div>
+  </div>
     <footer>
       <div class="container">
         <div class="col-md-4">

@@ -90,10 +90,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$mc = mysqli_real_escape_string($dbc, trim($_POST['membership_comment']));
 	}
 
+	if (empty($_POST['mem_image'])) {
+		$errors[] = 'You forgot to enter a membership image.';
+	} else {
+		$mi = mysqli_real_escape_string($dbc, trim($_POST['mem_image']));
+	}
+
 	if (empty($errors)) { // If everything's OK.
 
 			// Make the query:
-			$q = "UPDATE membership SET membership_type='$mt', membership_price='$mp', membership_duration='$md', membership_comment='$mc' WHERE mem_id=$id LIMIT 1";
+			$q = "UPDATE membership SET membership_type='$mt', membership_price='$mp', membership_duration='$md', membership_comment='$mc', mem_image='$mi' WHERE mem_id=$id LIMIT 1";
 
 			$r = @mysqli_query ($dbc, $q);
 			if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
@@ -125,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Always show the form...
 
 // Retrieve the user's information:
-$q = "SELECT mem_id, membership_type, membership_price, membership_duration, membership_comment  FROM membership WHERE mem_id=$id";
+$q = "SELECT mem_id, membership_type, membership_price, membership_duration, membership_comment, mem_image FROM membership WHERE mem_id=$id";
 $r = @mysqli_query ($dbc, $q);
 
 if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
@@ -139,6 +145,7 @@ if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
 <p>Membership Price: <input type="text" name="membership_price" size="15" maxlength="30" value="' . $row[2] . '" /></p>
 <p>Membership Duration: <input type="text" name="membership_duration" size="20" maxlength="60" value="' . $row[3] . '"  /> </p>
 <p>Membership Comment: <input type="text" name="membership_comment" size="20" maxlength="60" value="' . $row[4] . '"  /> </p>
+<p>Membership Image: <input type="text" name="mem_image" size="20" maxlength="500" value="' . $row[5] . '"  /> </p>
 <p><input type="submit" name="submit" value="Submit" /></p>
 <input type="hidden" name="id" value="' . $id . '" />
 </form>';

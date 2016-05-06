@@ -43,7 +43,7 @@
       require ('mysqli_connect.php');
 
       // Define the query:
-      $q = "SELECT class_id, class_name, class_time, class_date, class_price , class_instructor FROM classes";
+      $q = "SELECT class_id, class_name, class_time, class_date, class_price , class_instructor, class_image FROM classes";
       $r = @mysqli_query ($dbc, $q);
 
       // Count the number of returned rows:
@@ -62,6 +62,7 @@
           <td align="left"><b>Date</b></td>
           <td align="left"><b>Instructor</b></td>
           <td align="left"><b>Fee</b></td>
+          <td align="left"><b>Class Image</b></td>
         </tr>
       ';
 
@@ -74,6 +75,7 @@
             <td align="left">' . $row['class_date'] . '</td>
             <td align="left">' . $row['class_instructor'] . '</td>
             <td align="left">' . $row['class_price'] . '</td>
+            <td align="left">' . $row['class_image'] . '</td>
             <td align="left"><a href="edit_pages/classes-edit.php?id=' . $row['class_id'] . '">Edit</a></td>
             <td align="left"><a href="delete/delete-classes.php?id=' . $row['class_id'] . '">Delete</a></td>
           </tr>

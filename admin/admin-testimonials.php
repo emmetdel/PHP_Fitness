@@ -81,6 +81,7 @@
 
             } else { // If no records were returned.
               echo '<p class="error">There are currently no testimonials.</p>';
+              echo '<td align="left"><a href="add-new/testimonials-addnew.php">Add New</a></td>';
             }
 
             mysqli_close($dbc);

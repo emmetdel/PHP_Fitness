@@ -123,9 +123,9 @@ if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
 
   // Create the form:
   echo '<form action="testimonials-edit.php" method="post">
-<p>Testimonial Author: <input type="text" name="test_name" size="15" maxlength="15" value="' . $row[1] . '" /></p>
-<p>Testimonial Date: <input type="text" name="test_date" size="20" maxlength="60" value="' . $row[2] . '"  /> </p>
-<p>Testimonial Comment: <input type="text" name="test_comment" size="20" maxlength="60" value="' . $row[3] . '"  /> </p>
+<p>Testimonial Author: <input type="text" name="test_name" size="15" maxlength="50" value="' . $row[1] . '" /></p>
+<p>Testimonial Date: <input type="text" name="test_date" size="20" maxlength="20" value="' . $row[2] . '"  /> </p>
+<p>Testimonial Comment: <input type="comment" name="test_comment" size="100" maxlength="1000" value="' . $row[3] . '"  /> </p>
 <p><input type="submit" name="submit" value="Submit" /></p>
 <input type="hidden" name="id" value="' . $id . '" />
 </form>';

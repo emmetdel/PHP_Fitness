@@ -25,7 +25,7 @@
       <li class="active"><a href="index.php">Home</a></li>
       <li><a href="membership.php">Membership</a></li>
       <li><a href="classes.php">Classes</a></li>
-     <li><a href="testiomonials.php">Testimonials</a></li>
+     <li><a href="testimonials.php">Testimonials</a></li>
       <li><a href="facilities.php">Facilities</a></li>
       <li><a href="contact.php">Contact Us</a></li>
       <li><a href="login.php">Login</a></li>
@@ -39,35 +39,11 @@
       <h4>Celebrating health</h4>
     </div>
   </div>
-  <div class="container" id="test">
-    <div class="test col-md-6">
-      <h3>Special Offers</h3>
-      <img src="http://placehold.it/140x180">
-
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
-
-    </div>
-    <div class="test col-md-6">
-      <h3>Classes</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
-    <div class="test col-md-6">
-      <h3>Facilities</h3>
-      <img src="http://placehold.it/140x180">
-
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
-
-    </div>
-    <div class="test col-md-6">
-      <h3>Our Team</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
+  <div class="container" id="test1">
+    <?php
+      include('../functions/functions.php');
+      getFeature();
+    ?>
     </div>
     <footer>
       <div class="container">

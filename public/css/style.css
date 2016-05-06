@@ -59,6 +59,10 @@ div.col-md-12.hero-image, div.container{
   width: 33%;
 }
 
+.test1 h3{
+  width: 66%;
+}
+
 .test p{
   width: 66%;
   float: right;
@@ -69,6 +73,7 @@ footer{
   height: 150px;
   width: 100%;
   background-color: #f8f8f8;
+  clear: both;
 }
 
 footer.container{
@@ -114,5 +119,5 @@ footer p{
   left: 580px;
   top: 320px;
   color: red;
-  
+
 }

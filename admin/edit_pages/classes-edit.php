@@ -30,17 +30,6 @@
 </nav>
 <div class="container page">
 
-<!-- <form role ="form" class="frm1" action="index.html" method="post">
-  <div class="form-group">
-    <label for="class-name">Class Name:</label><input class = "form-control" id="class-name">
-    <label for="class-time">Class Time:</label><input class = "form-control" id="class-time">
-    <label for="date">Date:</label><input class ="form-control" id="date">
-    <label for="instructor">Instructor:</label><input class ="form-control" id="instructor">
-    <label for="fee">Fee:</label><input class ="form-control" id="fee">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> -->
-
 <?php
 
 $page_title = 'Edit a Class';
@@ -98,6 +87,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fee = mysqli_real_escape_string($dbc, trim($_POST['class_price']));
   }
 
+  // Check for an instructor:
+  if (empty($_POST['class_image'])) {
+    $errors[] = 'You forgot to enter a image.';
+  } else {
+    $ci = mysqli_real_escape_string($dbc, trim($_POST['class_image']));
+  }
+
 	if (empty($errors)) { // If everything's OK.
 
 		//  Test for unique email address:
@@ -106,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// if (mysqli_num_rows($r) == 0) {
 
 			// Make the query:
-			$q = "UPDATE classes SET class_name='$fn', class_time='$ti', class_date='$da', class_instructor = '$in', class_price='$fee'  WHERE class_id=$id LIMIT 1";
+			$q = "UPDATE classes SET class_name='$fn', class_time='$ti', class_date='$da', class_instructor = '$in', class_price='$fee', class_image='$ci'  WHERE class_id=$id LIMIT 1";
 			$r = @mysqli_query ($dbc, $q);
 			if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
 
@@ -137,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Always show the form...
 
 // Retrieve the user's information:
-$q = "SELECT class_id, class_name, class_time, class_date, class_price , class_instructor FROM classes WHERE class_id=$id";
+$q = "SELECT class_id, class_name, class_time, class_date, class_price , class_instructor, class_image FROM classes WHERE class_id=$id";
 $r = @mysqli_query ($dbc, $q);
 
 if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
@@ -152,6 +148,7 @@ if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
 <p>Class Date: <input type="text" name="class_date" size="20" maxlength="60" value="' . $row[3] . '"  /> </p>
 <p>Class Price: <input type="text" name="class_price" size="20" maxlength="60" value="' . $row[4] . '"  /> </p>
 <p>Class Instructor: <input type="text" name="class_instructor" size="20" maxlength="60" value="' . $row[5] . '"  /> </p>
+<p>Class Image: <input type="text" name="class_image" size="20" maxlength="60" value="' . $row[6] . '"  /> </p>
 <p><input type="submit" name="submit" value="Submit" /></p>
 <input type="hidden" name="id" value="' . $id . '" />
 </form>';

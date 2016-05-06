@@ -40,34 +40,12 @@
     </div>
   </div>
   <div class="container" id="test">
-    <div class="test col-md-6">
-      <h3>Step Aerobics</h3>
-      <img src="http://placehold.it/140x180">
 
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
+    <?php
+      include('../functions/functions.php');
+      getClasses();
+    ?>
 
-    </div>
-    <div class="test col-md-6">
-      <h3>Spin</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
-    <div class="test col-md-6">
-      <h3>Yoga</h3>
-      <img src="http://placehold.it/140x180">
-
-        <p><i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
-
-    </div>
-    <div class="test col-md-6">
-      <h3>Zumba</h3>
-      <img src="http://placehold.it/140x180">
-      <p>
-        <i>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i>
-      </p>
-    </div>
     </div>
     <footer>
       <div class="container">

@@ -66,6 +66,12 @@
         $cf = trim($_POST['class_fee']);
       }
 
+      if (empty($_POST['class_image'])) {
+        $errors[] = 'You forgot to enter the class image.';
+      } else {
+        $cim = trim($_POST['class_image']);
+      }
+
       if (empty($errors)) {
 
       require ('mysqli_connect.php');
@@ -75,9 +81,10 @@
       $time = mysqli_real_escape_string($dbc, trim($time));
       $ci = mysqli_real_escape_string($dbc, trim($ci));
       $cf = mysqli_real_escape_string($dbc, trim($cf));
+      $cim = mysqli_real_escape_string($dbc, trim($cim));
 
-      $sql = "INSERT INTO classes (class_name, class_time, class_date, class_instructor, class_price)
-      VALUES ('$name', '$time', '$date', '$ci', '$cf')";
+      $sql = "INSERT INTO classes (class_name, class_time, class_date, class_instructor, class_price, class_image)
+      VALUES ('$name', '$time', '$date', '$ci', '$cf', '$cim')";
 
       $r = @mysqli_query($dbc, $sql);
 
@@ -113,6 +120,7 @@
     <label >Class Date:</label><input name="class_date" class = "form-control" value="<?php if (isset($_POST['class_date'])) echo $_POST['class_date']; ?>">
     <label >Class Instructor:</label><input name="class_instructor" class ="form-control" value="<?php if (isset($_POST['class_instructor'])) echo $_POST['class_instructor']; ?>">
     <label >Class Fee:</label><input name="class_fee" class ="form-control" value="<?php if (isset($_POST['class_fee'])) echo $_POST['class_fee']; ?>">
+    <label >Class Image:</label><input name="class_image" class ="form-control" value="<?php if (isset($_POST['class_image'])) echo $_POST['class_image']; ?>">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>

@@ -123,7 +123,7 @@ if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
 	echo '<form action="featurebox-edit.php" method="post">
 <p>Offer Title: <input type="text" name="offer_title" size="15" maxlength="15" value="' . $row[1] . '" /></p>
 <p>Offer Description: <input type="text" name="offer_desc" size="15" maxlength="30" value="' . $row[2] . '" /></p>
-<p>Offer Image: <input type="text" name="offer_image" size="20" maxlength="60" value="' . $row[3] . '"  /> </p>
+<p>Offer Image: <input type="text" name="offer_image" size="20" maxlength="500" value="' . $row[3] . '"  /> </p>
 <p><input type="submit" name="submit" value="Submit" /></p>
 <input type="hidden" name="id" value="' . $id . '" />
 </form>';
