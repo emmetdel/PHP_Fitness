@@ -27,6 +27,7 @@
 		<li class="active"><a href="classes.php">Classes</a></li>
 		<li><a href="testimonials.php">Testimonials</a></li>
 		<li><a href="facilities.php">Facilities</a></li>
+		<li><a href="gallery.php">Gallery</a></li>
 		<li><a href="contact.php">Contact Us</a></li>
     <li><a href="login.php">Login</a></li>
     </ul>

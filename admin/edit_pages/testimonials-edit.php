@@ -31,14 +31,6 @@
 </nav>
 <div class="container page">
 
-<!-- <form role ="form" class="frm1" action="index.html" method="post">
-  <div class="form-group">
-    <label for="author">Author:</label><input class = "form-control" id="author">
-    <label for="date">Date:</label><input class = "form-control" id="date">
-    <label for="comment">Comment:</label><input class ="form-control" id="comment">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> -->
 <?php
 
 $page_title = 'Edit a Testimonial';
@@ -82,11 +74,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tc = mysqli_real_escape_string($dbc, trim($_POST['test_comment']));
   }
 
+  // Check for an date:
+  if (empty($_POST['test_image'])) {
+    $errors[] = 'You forgot to enter your testimonial image.';
+  } else {
+    $ti = mysqli_real_escape_string($dbc, trim($_POST['test_image']));
+  }
+
   if (empty($errors)) { // If everything's OK.
 
 
       // Make the query:
-      $q = "UPDATE testimonials SET test_name='$tn', test_date='$td', test_comment='$tc' WHERE test_id=$id LIMIT 1";
+      $q = "UPDATE testimonials SET test_name='$tn', test_date='$td', test_comment='$tc', test_image='$ti' WHERE test_id=$id LIMIT 1";
       $r = @mysqli_query ($dbc, $q);
       if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
 
@@ -113,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Always show the form...
 
 // Retrieve the user's information:
-$q = "SELECT test_id, test_name, test_date, test_comment FROM testimonials WHERE test_id=$id";
+$q = "SELECT test_id, test_name, test_date, test_comment, test_image FROM testimonials WHERE test_id=$id";
 $r = @mysqli_query ($dbc, $q);
 
 if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
@@ -126,6 +125,7 @@ if (mysqli_num_rows($r) == 1) { // Valid user ID, show the form.
 <p>Testimonial Author: <input type="text" name="test_name" size="15" maxlength="50" value="' . $row[1] . '" /></p>
 <p>Testimonial Date: <input type="text" name="test_date" size="20" maxlength="20" value="' . $row[2] . '"  /> </p>
 <p>Testimonial Comment: <input type="comment" name="test_comment" size="100" maxlength="1000" value="' . $row[3] . '"  /> </p>
+<p>Testimonial Image: <input type="comment" name="test_image" size="100" maxlength="1000" value="' . $row[4] . '"  /> </p>
 <p><input type="submit" name="submit" value="Submit" /></p>
 <input type="hidden" name="id" value="' . $id . '" />
 </form>';

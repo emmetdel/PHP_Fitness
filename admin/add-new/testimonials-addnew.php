@@ -54,6 +54,12 @@
           $td = trim($_POST['test_date']);
         }
 
+        if (empty($_POST['test_image'])) {
+          $errors[] = 'You forgot to enter test image';
+        } else {
+          $ti = trim($_POST['test_image']);
+        }
+
         if (empty($errors)) {
 
         require ('mysqli_connect.php');
@@ -61,9 +67,10 @@
         $tn = mysqli_real_escape_string($dbc, trim($tn));
         $tc = mysqli_real_escape_string($dbc, trim($tc));
         $td = mysqli_real_escape_string($dbc, trim($td));
+        $ti = mysqli_real_escape_string($dbc, trim($ti));
 
-        $sql = "INSERT INTO testimonials (test_name, test_comment, test_date)
-        VALUES ('$tn', '$tc', '$td')";
+        $sql = "INSERT INTO testimonials (test_name, test_comment, test_date, test_image)
+        VALUES ('$tn', '$tc', '$td', '$ti')";
 
         $r = @mysqli_query($dbc, $sql);
 
@@ -97,6 +104,7 @@
       <label >Author Name:</label><input name="test_name" class = "form-control" value="<?php if (isset($_POST['test_name'])) echo $_POST['test_name']; ?>">
       <label >Comment:</label><input name="test_comment" class = "form-control" value="<?php if (isset($_POST['test_comment'])) echo $_POST['test_comment']; ?>">
       <label >Date:</label><input name="test_date" class ="form-control" value="<?php if (isset($_POST['test_date'])) echo $_POST['test_date']; ?>">
+      <label >Image:</label><input name="test_image" class ="form-control" value="<?php if (isset($_POST['test_image'])) echo $_POST['test_image']; ?>">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

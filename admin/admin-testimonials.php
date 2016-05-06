@@ -23,11 +23,11 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="admin-feature-box.php">Feature Boxes</a></li>
+      <li><a href="admin-feature-box.php">Feature</a></li>
       <li><a href="admin-membership.php">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
       <li class="active"><a href="#">Testimonials</a></li>
-      <li><a href="admin-image-upload.php">Image Upload</a></li>
+      <li><a href="admin-image-upload.php">Upload</a></li>
       <li><a href="admin-bookings.php">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
       <li><a href="../public/index.php">Logout</a></li>
@@ -43,7 +43,7 @@
             require ('mysqli_connect.php');
 
             // Define the query:
-            $q = "SELECT test_id, test_comment, test_name , test_date FROM testimonials ";
+            $q = "SELECT test_id, test_comment, test_name , test_date, test_image FROM testimonials ";
             $r = @mysqli_query ($dbc, $q);
 
             // Count the number of returned rows:
@@ -60,6 +60,7 @@
                 <td align="left"><b>Member Name</b></td>
                 <td align="left"><b>Date</b></td>
                 <td align="left"><b>Comment</b></td>
+                <td align="left"><b>Image</b></td>
               </tr>
             ';
 
@@ -70,6 +71,7 @@
                   <td align="left">' . $row['test_name'] . '</td>
                   <td align="left">' . $row['test_date'] . '</td>
                   <td align="left">' . $row['test_comment'] . '</td>
+                  <td align="left">' . $row['test_image'] . '</td>
                   <td align="left"><a href="edit_pages/testimonials-edit.php?id=' . $row['test_id'] . '">Edit</a></td>
                   <td align="left"><a href="delete/delete-testimonial.php?id=' . $row['test_id'] . '">Delete</a></td>
                 </tr>

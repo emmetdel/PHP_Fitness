@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Feature Boxes</title>
+    <title>Contact Page</title>
     <link rel="stylesheet" href="../public/css/bootstrap.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="../public/css/style.css" media="screen"  charset="utf-8">
     <link rel="stylesheet" href="../public/css/admin-style.css" media="screen"  charset="utf-8">
@@ -23,28 +23,28 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Feature</a></li>
+      <li><a href="admin-feature-box.php">Feature</a></li>
       <li><a href="admin-membership.php">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
-      <li><a href="admin-testimonials.php">Testimonials</a></li>
+      <li><a href="#">Testimonials</a></li>
       <li><a href="admin-image-upload.php">Upload</a></li>
       <li><a href="admin-bookings.php">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
-      <li><a href="admin-contact.php">Contact</a></li>
-
+      <li class="active"><a href="admin-contact.php">Contact</a></li>
       <li><a href="../public/index.php">Logout</a></li>
     </ul>
   </div>
 </nav>
 <div class="container page">
-    <?php
+          <?php
 
-            $page_title = 'View the Feature Boxes';
-            echo '<h1>Feature Boxes</h1>';
+            $page_title = 'View the Current Testimonials';
+            echo '<h1>Testimonials</h1>';
 
             require ('mysqli_connect.php');
+
             // Define the query:
-            $q = "SELECT offer_id, offer_title, offer_desc, offer_image FROM feature_box";
+            $q = "SELECT name, telephone_no, email , comment_box FROM contact ";
             $r = @mysqli_query ($dbc, $q);
 
             // Count the number of returned rows:
@@ -53,39 +53,39 @@
             if ($num > 0) { // If it ran OK, display the records.
 
               // Print how many users there are:
-              echo "<p>There are currently $num feature boxes.</p>\n";
+              echo "<p>There are currently $num contact.</p>\n";
 
               // Table header:
               echo '<table class="table table-striped test-table" align="center" cellspacing="3" cellpadding="3" width="75%">
               <tr>
-                <td align="left"><b>Title</b></td>
-                <td align="left"><b>Image</b></td>
-                <td align="left"><b>Description</b></td>
+                <td align="left"><b>Name</b></td>
+                <td align="left"><b>Telephone No</b></td>
+                <td align="left"><b>Email</b></td>
+                <td align="left"><b>Comment</b></td>
               </tr>
             ';
 
               // Fetch and print all the records:
               while ($row = mysqli_fetch_array($r)) {
                 echo '<tr>
-                  <td align="left">' . $row['offer_title'] . '</td>
-                  <td align="left">' . $row['offer_image'] . '</td>
-                  <td align="left">' . $row['offer_desc'] . '</td>
-                  <td align="left"><a href="edit_pages/featurebox-edit.php?id=' . $row['offer_id'] . '">Edit</a></td>
-                  <td align="left"><a href="delete/delete-featurebox.php?id=' . $row['offer_id'] . '">Delete</a></td>
+
+                  <td align="left">' . $row['name'] . '</td>
+                  <td align="left">' . $row['telephone_no'] . '</td>
+                  <td align="left">' . $row['email'] . '</td>
+                  <td align="left">' . $row['comment_box'] . '</td>
                 </tr>
                 ';
               }
-              echo '<td align="left"><a href="add-new/featurebox-addnew.php">Add</a></td>';
               echo '</table>';
               mysqli_free_result ($r);
 
             } else { // If no records were returned.
-              echo '<p class="error">There are currently no feature boxes.</p>';
-            }
+              echo '<p class="error">There are currently no contact us.</p>';            }
 
             mysqli_close($dbc);
 
           ?>
+
 </div>
     <script type="text/javascript" src="javascript/bootstrap.js"></script>
   </body>

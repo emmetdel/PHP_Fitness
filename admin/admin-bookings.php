@@ -23,13 +23,14 @@
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="admin-feature-box.php">Feature Boxes</a></li>
+      <li><a href="admin-feature-box.php">Feature</a></li>
       <li><a href="admin-membership.php">Membership</a></li>
       <li><a href="admin-classes.php">Classes</a></li>
       <li><a href="admin-testimonials.php">Testimonials</a></li>
-      <li><a href="admin-image-upload.php">Image Upload</a></li>
+      <li><a href="admin-image-upload.php">Upload</a></li>
       <li class="active"><a href="#">Bookings</a></li>
       <li><a href="admin-pages-edit.php">Pages Edit</a></li>
+      <li><a href="admin-contact.php">Contact</a></li>
       <li><a href="../public/index.php">Logout</a></li>
     </ul>
   </div>

@@ -14,7 +14,7 @@
       echo "<h3>". $row['test_name']."</h3>";
       echo "<p><i>\"". $row['test_comment']."\"</i></p>";
       echo "<p><i>\"". $row['test_date']."\"</i></p>";
-      echo '<img src="http://placehold.it/140x180">';
+      echo "<img height='180' width='140' src=\"".$row['test_image']."\">";
       echo "</div>";
 
     }
